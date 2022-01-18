@@ -27,8 +27,7 @@ namespace APIPortalLibrary.Services.Login
                         "\"owner\": \""+ owner +"\"," +
                         "\"grantType\": \""+ grantType +"\"," +
                         "\"saasApp\": "+ saas +"}";
-            Console.WriteLine(bodyRequestLogin);
-            Console.ReadLine();
+
             try
             {
                 ILogin _restApiService = RestService.For<ILogin>(_client);
