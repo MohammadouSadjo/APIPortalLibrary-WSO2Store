@@ -17,6 +17,11 @@ namespace APIPortalLibrary.Services.Login
         {
             _client = client;
         }
+
+        public void SetBaseAdress(Uri uri)
+        {
+            _client.BaseAddress = uri;
+        }
         public async Task<ApiResponse<ClientIDAndSecret>> ClientIDSecret(string username, string password, string callbackUrl, string clientName, string owner, string grantType, bool saasApp)// Get clientId and SecretID of the user
         {
             //Convert to string
